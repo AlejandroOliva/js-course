@@ -4,7 +4,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 
 ## 📚 Course Index
 
-### **Module 1: Introduction to JavaScript**
+### **[Module 1: Introduction to JavaScript](module-01-introduction/README.md)**
 
 * What is JavaScript?
 * Why JavaScript?
@@ -12,7 +12,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * JavaScript runtime environments
 * Basic syntax and variables
 
-### **Module 2: JavaScript Fundamentals**
+### **[Module 2: JavaScript Fundamentals](module-02-fundamentals/README.md)**
 
 * Data types and structures
 * Functions and scope
@@ -20,7 +20,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * Control flow and loops
 * Error handling
 
-### **Module 3: Advanced JavaScript Concepts**
+### **[Module 3: Advanced JavaScript Concepts](module-03-advanced-concepts/README.md)**
 
 * Closures and higher-order functions
 * Promises and async/await
@@ -28,7 +28,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * Classes and inheritance
 * Prototypes and this keyword
 
-### **Module 4: Node.js Basics**
+### **[Module 4: Node.js Basics](module-04-nodejs-basics/README.md)**
 
 * What is Node.js?
 * Installing Node.js
@@ -37,7 +37,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * File system operations
 * Building a CLI application
 
-### **Module 5: Node.js Web Development**
+### **[Module 5: Node.js Web Development](module-05-nodejs-web-development/README.md)**
 
 * HTTP module and creating servers
 * Express.js framework
@@ -46,7 +46,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * RESTful APIs
 * Authentication and security
 
-### **Module 6: Modern JavaScript Ecosystem**
+### **[Module 6: Modern JavaScript Ecosystem](module-06-modern-ecosystem/README.md)**
 
 * ES6+ features
 * Build tools (Webpack, Vite)
@@ -55,7 +55,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * Frontend frameworks overview (React, Vue, Angular)
 * Full-stack development
 
-### **Module 7: Practical Exercises**
+### **[Module 7: Practical Exercises](module-07-practical-exercises/README.md)**
 
 * Progressive exercises
 * Real projects
