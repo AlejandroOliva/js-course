@@ -32,6 +32,47 @@ JavaScript is a high-level, interpreted programming language that was originally
 
 ### 1. Install Node.js
 
+#### Option A: Using ASDF (Recommended)
+
+ASDF is a version manager that allows you to easily install and manage multiple versions of Node.js, just like rbenv for Ruby or nvm for Node.js.
+
+**Install ASDF:**
+```bash
+# Install ASDF
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+
+# Add to your shell profile (~/.bashrc, ~/.zshrc, etc.)
+echo '. "$HOME/.asdf/asdf.sh"' >> ~/.bashrc
+echo '. "$HOME/.asdf/completions/asdf.bash"' >> ~/.bashrc
+
+# Reload your shell
+source ~/.bashrc
+```
+
+**Install Node.js plugin:**
+```bash
+# Add Node.js plugin
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
+# Install latest LTS version
+asdf install nodejs lts
+
+# Set as global default
+asdf global nodejs lts
+
+# Verify installation
+node --version
+npm --version
+```
+
+**ASDF Benefits:**
+- Easy version switching
+- Project-specific Node.js versions
+- No sudo required
+- Works with multiple languages
+
+#### Option B: Official Installer
+
 Visit [nodejs.org](https://nodejs.org) and download the LTS (Long Term Support) version.
 
 **Verify installation:**

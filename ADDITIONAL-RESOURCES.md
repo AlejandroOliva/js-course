@@ -122,6 +122,11 @@
 - **yarn** - Fast, reliable package manager
 - **pnpm** - Efficient package manager
 
+### Version Managers
+- **[ASDF](https://asdf-vm.com/)** - Universal version manager for multiple languages including Node.js
+- **nvm** - Node Version Manager
+- **n** - Simple Node.js version manager
+
 ### Package Registries
 - **npmjs.com** - Official npm registry
 - **GitHub Packages** - Package registry by GitHub

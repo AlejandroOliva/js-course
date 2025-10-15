@@ -74,6 +74,7 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 * Basic programming knowledge (any language)
 * Command line/terminal familiarity
 * Node.js 18+ installed (see Module 1 for installation)
+  * **Recommended**: Use ASDF version manager for easy Node.js management
 * A modern web browser
 * Willingness to learn 😊
 

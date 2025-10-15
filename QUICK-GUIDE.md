@@ -447,6 +447,16 @@ npm test                # Run tests
 npm run build           # Build project
 ```
 
+### ASDF (Version Manager)
+```bash
+asdf plugin add nodejs  # Add Node.js plugin
+asdf install nodejs lts # Install latest LTS
+asdf global nodejs lts  # Set global version
+asdf local nodejs 18.0.0 # Set project version
+asdf list nodejs        # List installed versions
+asdf current nodejs     # Show current version
+```
+
 ### Git
 ```bash
 git init                # Initialize repository
