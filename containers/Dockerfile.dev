@@ -1,0 +1,31 @@
+# JavaScript Course Development Container
+FROM node:20-alpine
+
+# Install system dependencies
+RUN apk add --no-cache \
+    git \
+    curl \
+    bash \
+    mongodb-tools \
+    redis
+
+# Install VS Code Server
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+# Create app directory
+WORKDIR /workspace
+
+# Create non-root user
+RUN adduser -D -s /bin/sh node
+RUN chown -R node:node /workspace
+USER node
+
+# Set environment variables
+ENV NODE_ENV=development
+ENV PORT=3000
+
+# Expose ports
+EXPOSE 3000 8080
+
+# Default command
+CMD ["/bin/sh"]

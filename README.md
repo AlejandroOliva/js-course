@@ -63,6 +63,20 @@ Welcome to the complete JavaScript and Node.js course! This course will take you
 
 ## 🚀 How to Use This Course
 
+### Option 1: Using Containers (Recommended)
+Each module has a pre-configured container environment:
+
+```bash
+# Build and run the development container
+cd containers
+podman build -f Dockerfile.dev -t js-course-dev .
+podman run -it --rm -p 3000:3000 -p 8080:8080 js-course-dev
+
+# Or use the multi-service setup
+podman-compose up -d
+```
+
+### Option 2: Local Development
 1. **Read each module in order** - The course is designed to be progressive
 2. **Practice each example** - Run all code in your terminal or browser console
 3. **Do the exercises** - Practice is fundamental

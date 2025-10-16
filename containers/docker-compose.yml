@@ -1,0 +1,81 @@
+version: "3.8"
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7
+    container_name: js-course-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: js-course-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # JavaScript Development Environment
+  js-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: js-course-dev
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    volumes:
+      - ../examples:/workspace/examples
+      - ../module-04-nodejs-basics:/workspace/nodejs-basics
+      - ../module-05-nodejs-web-development:/workspace/nodejs-web
+      - ../module-06-modern-ecosystem:/workspace/modern-ecosystem
+      - ../module-07-practical-exercises:/workspace/exercises
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - MONGODB_URI=mongodb://admin:password@mongodb:27017/js_course?authSource=admin
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # VS Code Server
+  code-server:
+    image: codercom/code-server:latest
+    container_name: js-course-code-server
+    ports:
+      - "8081:8080"
+    volumes:
+      - ../:/workspace
+    environment:
+      - PASSWORD=password
+    command: --bind-addr 0.0.0.0:8080 /workspace
+
+volumes:
+  mongodb_data:
+  redis_data:
